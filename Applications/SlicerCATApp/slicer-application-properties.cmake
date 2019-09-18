@@ -14,7 +14,7 @@ set(VERSION_PATCH
   )
 
 set(DESCRIPTION_SUMMARY
-  "Example application for Slicer Customization[D[D[D[D[D[D[D[D[D[D[D[c"
+  "Customized version of Slicer"
   )
 set(DESCRIPTION_FILE
   ${Slicer_SOURCE_DIR}/README.txt
