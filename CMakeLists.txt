@@ -35,7 +35,7 @@ set(Slicer_ORGANIZATION_DOMAIN "kitware.com")
 set(Slicer_ORGANIZATION_NAME   "Kitware, Inc.")
 
 # Default home and favorite modules
-set(Slicer_DEFAULT_HOME_MODULE "Home")
+set(Slicer_DEFAULT_HOME_MODULE "VolumeRendering")
 set(Slicer_DEFAULT_FAVORITE_MODULES "Data, Volumes, Models, Transforms, Markups, SegmentEditor")
 
 # Configure SuperBuild
