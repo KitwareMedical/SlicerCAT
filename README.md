@@ -1,9 +1,9 @@
 SlicerCAT by Kitware, Inc.
 ================================
 
-Example application for Slicer Customization[D[D[D[D[D[D[D[D[D[D[D[c
+Example application for Slicer Customization
 
-![SlicerCAT by Kitware, Inc.](Applications/App/Resources/Images/LogoFull.png?raw=true)
+![SlicerCAT by Kitware, Inc.](Applications/SlicerCATApp/Resources/Images/LogoFull.png?raw=true)
 
 Prerequisites
 -------------
