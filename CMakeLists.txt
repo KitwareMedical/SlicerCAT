@@ -85,7 +85,7 @@ option(Slicer_BUILD_DIFFUSION_SUPPORT           "Build application with Diffusio
 option(Slicer_BUILD_EXTENSIONMANAGER_SUPPORT    "Build application with ExtensionManager support"     OFF)
 option(Slicer_BUILD_MULTIVOLUME_SUPPORT         "Build application with MultiVolume support"          OFF)
 option(Slicer_BUILD_PARAMETERSERIALIZER_SUPPORT "Build application with parameter serializer support" OFF)
-option(Slicer_USE_PYTHONQT                      "Build application with Python support"               OFF)
+option(Slicer_USE_PYTHONQT                      "Build application with Python support"               ON)
 option(Slicer_USE_QtTesting                     "Build application with QtTesting support"            OFF)
 option(Slicer_USE_SimpleITK                     "Build application with SimpleITK support"            OFF)
 
@@ -129,14 +129,13 @@ set(Slicer_EXTENSION_SOURCE_DIRS
   )
 
 # Add remote extension source directories
-
 # SlicerOpenIGTLink
 set(extension_name "SlicerOpenIGTLink")
 set(${extension_name}_SOURCE_DIR "${CMAKE_BINARY_DIR}/${extension_name}")
 FetchContent_Populate(${extension_name}
  SOURCE_DIR     ${${extension_name}_SOURCE_DIR}
  GIT_REPOSITORY ${EP_GIT_PROTOCOL}://github.com/openigtlink/SlicerOpenIGTLink.git
- GIT_TAG        2b92f7b1ffe02403109b671f28424e8770e902a0
+ GIT_TAG        origin/master
  GIT_PROGRESS   1
  QUIET
  )
