@@ -74,7 +74,7 @@ if(WIN32)
 endif()
 
 # Slicer options
-option(BUILD_TESTING                            "Build application test suite"                        ON)
+option(BUILD_TESTING                            "Build application test suite"                        OFF)
 option(Slicer_BUILD_DOCUMENTATION               "Build documentation (Doxygen, sphinx, ...)"          OFF)
 if(WIN32)
   option(Slicer_BUILD_WIN32_CONSOLE             "Build application executable as a console app"       OFF)
@@ -129,12 +129,12 @@ set(Slicer_EXTENSION_SOURCE_DIRS
   )
 
 # Add remote extension source directories
-# SlicerOpenIGTLink
-set(extension_name "SlicerOpenIGTLink")
+# SlicerIGT
+set(extension_name "SlicerIGT")
 set(${extension_name}_SOURCE_DIR "${CMAKE_BINARY_DIR}/${extension_name}")
 FetchContent_Populate(${extension_name}
  SOURCE_DIR     ${${extension_name}_SOURCE_DIR}
- GIT_REPOSITORY ${EP_GIT_PROTOCOL}://github.com/openigtlink/SlicerOpenIGTLink.git
+ GIT_REPOSITORY ${EP_GIT_PROTOCOL}://github.com/slicerigt/slicerigt.git
  GIT_TAG        origin/master
  GIT_PROGRESS   1
  QUIET
