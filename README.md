@@ -33,7 +33,7 @@ Prerequisites
     * Setup [your git username](https://help.github.com/articles/setting-your-username-in-git) and [your git email](https://help.github.com/articles/setting-your-email-in-git).
 
     * If not already done, email `Jean-Christophe Fillion-Robin <jchris.fillionr@kitware.com>` to be granted access to
-    the [Kitware/SlicerCAT](https://github.com/Kitware/SlicerCAT) repository.
+    the [KitwareMedical/SlicerCAT](https://github.com/KitwareMedical/SlicerCAT) repository.
 
 Checkout
 --------
@@ -45,7 +45,7 @@ Checkout
 cd /c
 mkdir W
 cd /c/W
-git clone https://github.com/Kitware/SlicerCAT.git SlicerCAT
+git clone https://github.com/KitwareMedical/SlicerCAT.git SlicerCAT
 ```
 
 Note: use short source and build directory names to avoid the [maximum path length limitation](http://msdn.microsoft.com/en-us/library/windows/desktop/aa365247%28v=vs.85%29.aspx#maxpath).
