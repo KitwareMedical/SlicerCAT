@@ -1,7 +1,9 @@
 SlicerCAT by Kitware, Inc.
 ================================
 
-Example application for Slicer Customization
+This repository hosts an example of application created using the `KitwareMedical/SlicerCustomAppTemplate`. For more details, read the following pages:
+* https://blog.kitware.com/slicercat-creating-custom-applications-based-on-3d-slicer
+* https://github.com/KitwareMedical/SlicerCustomAppTemplate#readme
 
 ![SlicerCAT by Kitware, Inc.](Applications/SlicerCATApp/Resources/Images/LogoFull.png?raw=true)
 
