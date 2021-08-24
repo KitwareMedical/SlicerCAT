@@ -4,16 +4,21 @@ set(MODULE_NAME Example)
 #-----------------------------------------------------------------------------
 set(MODULE_PYTHON_SCRIPTS
   ${MODULE_NAME}.py
+  ${MODULE_NAME}Lib/__init__.py
   )
 
 set(MODULE_PYTHON_RESOURCES
-  Resources/Icons/${MODULE_NAME}.png
+  Resources/Icons/Example.png
+  Resources/slicerorg.qss
   )
+
+slicerFunctionAddPythonQtResources(MODULE_PYTHON_QRC_RESOURCES
+  ${MODULE_NAME}Lib/${MODULE_NAME}.qrc)
 
 #-----------------------------------------------------------------------------
 slicerMacroBuildScriptedModule(
   NAME ${MODULE_NAME}
-  SCRIPTS ${MODULE_PYTHON_SCRIPTS}
+  SCRIPTS ${MODULE_PYTHON_SCRIPTS} ${MODULE_PYTHON_QRC_RESOURCES}
   RESOURCES ${MODULE_PYTHON_RESOURCES}
   WITH_GENERIC_TESTS
   )

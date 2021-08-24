@@ -1,0 +1,12 @@
+<!DOCTYPE RCC>
+<!--
+  See http://www.slicer.org/slicerWiki/index.php/Documentation/Nightly/Developers/Build_system/Qt_resource_files for more information.
+-->
+
+<RCC version="1.0">
+
+  <qresource prefix="/">    
+    <file>Icons/Restyle.png</file>
+  </qresource>
+
+</RCC>
