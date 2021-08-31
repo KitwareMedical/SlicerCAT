@@ -4,6 +4,8 @@ import vtk, qt, ctk, slicer
 from slicer.ScriptedLoadableModule import *
 import logging
 
+from ExampleLib import ExampleResources as Resources
+
 #
 # Example
 #
@@ -38,10 +40,15 @@ class ExampleWidget(ScriptedLoadableModuleWidget):
   https://github.com/Slicer/Slicer/blob/master/Base/Python/slicer/ScriptedLoadableModule.py
   """
 
+  customQssEnabled = False
+
   def setup(self):
     ScriptedLoadableModuleWidget.setup(self)
 
     # Instantiate and connect widgets ...
+
+    # Custom toolbar for applying style
+    self.modifyWindowUI()
 
     #
     # Parameters Area
@@ -133,6 +140,27 @@ class ExampleWidget(ScriptedLoadableModuleWidget):
     imageThreshold = self.imageThresholdSliderWidget.value
     logic.run(self.inputSelector.currentNode(), self.outputSelector.currentNode(), imageThreshold, enableScreenshotsFlag)
 
+  def modifyWindowUI(self):
+    mainToolBar = slicer.util.findChild(slicer.util.mainWindow(), 'MainToolBar')
+
+    self.CustomToolBar = qt.QToolBar("CustomToolBar")
+    self.CustomToolBar.name = "CustomToolBar"
+    slicer.util.mainWindow().insertToolBar(mainToolBar, self.CustomToolBar)
+    
+    moduleIcon = qt.QIcon(":/Icons/Restyle.png")
+    self.StyleAction = self.CustomToolBar.addAction(moduleIcon, "")
+    self.StyleAction.triggered.connect(self.toggleStyle)
+
+  def toggleStyle(self):
+    if self.customQssEnabled:
+      with open(self.resourcePath("slicerorg.qss"),"r") as fh:
+        style = fh.read()
+        for widget in [slicer.app]:
+          widget.styleSheet = style
+    else:
+      slicer.app.styleSheet = ''
+    self.customQssEnabled = not self.customQssEnabled
+    
 #
 # ExampleLogic
 #
