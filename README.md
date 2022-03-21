@@ -12,4 +12,6 @@ This application is intentend and an example of configuring a custom application
 
 * https://github.com/KitwareMedical/SlicerCustomAppTemplate#readme
 
+If you are interested in contributing changes / features to the custom appl template, please make pull requests at https://github.com/KitwareMedical/SlicerCustomAppTemplate
+
 
